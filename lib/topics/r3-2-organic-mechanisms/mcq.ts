@@ -746,7 +746,7 @@ export const mcqPapers: Paper[] = [
   // ===========================================================================
   {
     id: "r3-2-organic-mechanisms-m3",
-    title: "MCQ Paper 3: Organic Synthesis, Retrosynthesis & Integrated Mechanisms [SL + HL]",
+    title: "MCQ Set 3: Organic Synthesis, Retrosynthesis & Integrated Mechanisms [SL + HL]",
     level: "HL",
     questions: [
       {

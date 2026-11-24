@@ -751,7 +751,7 @@ export const mcqPapers: Paper[] = [
   // ===========================================================================
   {
     id: "r1-energetics-spontaneity-m3",
-    title: "MCQ Paper 3 · Born–Haber Mastery, Entropy & Gibbs (HL)",
+    title: "MCQ Set 3 · Born–Haber Mastery, Entropy & Gibbs (HL)",
     level: "HL",
     questions: [
       {
