@@ -20,6 +20,10 @@ export interface TopicMeta {
   title: string;
   strand: Strand;
   icon: string;
+  /** Which IB Diploma year normally finishes this topic (1 = DP1 / Year 12, 2 = DP2 / Year 13). */
+  dpYear: 1 | 2;
+  /** Teaching/revision order used when ?dp=2 is active (DP2 first, then DP1). */
+  dpOrder: number;
   level: IBLevel;
   curriculum: string;
   sections: SectionPlan[];
@@ -40,6 +44,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Structure 1: Models of the Particulate Nature of Matter",
     strand: "Structure 1: Particulate Matter",
     icon: "⚛️",
+    dpYear: 1,
+    dpOrder: 5,
     level: "SL",
     curriculum: "IB Chemistry FA2025 S1.1 Particulate nature, S1.2 Nuclear atom, S1.3 Electron configurations [HL], S1.4 Mole, S1.5 Ideal gases",
     sections: [
@@ -76,6 +82,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Structure 2: Models of Bonding & Structure",
     strand: "Structure 2: Bonding & Materials",
     icon: "💎",
+    dpYear: 1,
+    dpOrder: 6,
     level: "SL",
     curriculum: "IB Chemistry FA2025 S2.1 Ionic, S2.2 Covalent [HL], S2.3 Metallic [HL], S2.4 Bonding Triangle & Polymers [HL]",
     sections: [
@@ -112,6 +120,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Structure 3.1: The Periodic Table — Classification of Elements",
     strand: "Structure 3: Classification & Organic",
     icon: "📊",
+    dpYear: 1,
+    dpOrder: 7,
     level: "SL",
     curriculum: "IB Chemistry FA2025 S3.1 Periodic trends, Period 3 oxides, oxidation states & Transition Metals [HL]",
     sections: [
@@ -146,6 +156,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Structure 3.2: Functional Groups & Organic Analysis",
     strand: "Structure 3: Classification & Organic",
     icon: "🧬",
+    dpYear: 2,
+    dpOrder: 3,
     level: "SL",
     curriculum: "IB Chemistry FA2025 S3.2 Homologous series, IUPAC naming, isomerism [HL], MS/IR/¹H NMR Spectroscopy [HL]",
     sections: [
@@ -182,6 +194,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Reactivity 1: Energetics, Energy Cycles & Spontaneity",
     strand: "Reactivity 1–2: Energetics, Rate & Extent",
     icon: "🔥",
+    dpYear: 1,
+    dpOrder: 8,
     level: "SL",
     curriculum: "IB Chemistry FA2025 R1.1 Calorimetry, R1.2 Hess/Bond/Born–Haber [HL], R1.3 Fuels, R1.4 Entropy & Gibbs [HL]",
     sections: [
@@ -216,6 +230,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Reactivity 2: Stoichiometry, Kinetics & Chemical Equilibrium",
     strand: "Reactivity 1–2: Energetics, Rate & Extent",
     icon: "⚡",
+    dpYear: 2,
+    dpOrder: 1,
     level: "SL",
     curriculum: "IB Chemistry FA2025 R2.1 Stoichiometry, R2.2 Kinetics & Arrhenius [HL], R2.3 Equilibrium & ICE/ΔG–K [HL]",
     sections: [
@@ -252,6 +268,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Reactivity 3.1–3.2: Acids, Bases & Redox Electrochemistry",
     strand: "Reactivity 3: Reaction Mechanisms",
     icon: "🔋",
+    dpYear: 2,
+    dpOrder: 2,
     level: "SL",
     curriculum: "IB Chemistry FA2025 R3.1 Proton Transfer [HL] & R3.2 Electron Transfer / Electrochemistry [HL]",
     sections: [
@@ -286,6 +304,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Reactivity 3.3–3.4: Organic Mechanisms & Synthesis",
     strand: "Reactivity 3: Reaction Mechanisms",
     icon: "🔄",
+    dpYear: 2,
+    dpOrder: 4,
     level: "SL",
     curriculum: "IB Chemistry FA2025 R3.3 Free-Radical Substitution & R3.4 Nucleophilic/Electrophilic Mechanisms & Synthesis [HL]",
     sections: [
